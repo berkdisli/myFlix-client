@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
@@ -6,18 +8,26 @@ let imgPath = './img';
 
 export default class MainView extends React.Component {
 
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      movies: [
-        { _id: 1, Title: 'Inception', Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.', ImagePath: imgPath + 'inception.png', Genre:'Action, Adventure, Sci-fi', Director:'Christopher Nolan'},
-        { _id: 2, Title: 'The Shawshank Redemption', Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', ImagePath: imgPath + 'shawshank.jpg', Genre:'Drama', Director:'Frank Darabont'},
-        { _id: 3, Title: "Harry Potter and the Sorcerer's Stone", Description: 'An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.', ImagePath: imgPath + 'harrypotter.jpg', Genre:'Adventure, Family, Fantasy', Director:'Chris Columbus'}
-      ],
+      movies: [],
       selectedMovie: null
     }
   }
 
+  componentDidMount(){
+    axios.get('https://berkdislimyflix.herokuapp.com/movies')
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+  
   setSelectedMovie(newSelectedMovie) {
     this.setState({
       selectedMovie: newSelectedMovie
