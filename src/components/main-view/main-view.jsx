@@ -51,7 +51,7 @@ in state to that *particular user*/
   }
 
   render() {
-    const { movies, selectedMovie } = this.state;
+    const { movies, selectedMovie, user } = this.state;
 
  /* If there is no user, the LoginView is rendered. 
  If there is a user logged in, the user details are
