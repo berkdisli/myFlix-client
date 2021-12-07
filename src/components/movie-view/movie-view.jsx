@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Container, Row, Col, Button, Card, CardGroup } from 'react-bootstrap';
+
 export class MovieView extends React.Component {
 
   keypressCallback(event) {
