@@ -9,6 +9,7 @@ export function RegisView(props) {
     const [ username, setUsername ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ email, setEmail ] = useState('');
+    const [ birthday, setBirthday ] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,7 +17,7 @@ export function RegisView(props) {
           Username: username,
           Password: password,
           Email: email,
-         
+          Birthday: birthday       
         })
         .then(response => {
           const data = response.data;
@@ -57,6 +58,11 @@ export function RegisView(props) {
                     required 
                     minLength="8"
                     placeholder="Your password must be at least 8 characters"/>
+                </Form.Group>
+
+                <Form.Group controlId="formBirthday">
+                    <Form.Label className="mt-3">Birthday:</Form.Label>
+                    <Form.Control className="mb-3" type="date" onChange={e => setBirthday(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group>
