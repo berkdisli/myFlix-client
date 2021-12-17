@@ -1,0 +1,33 @@
+.navbar-header {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .navbar-collapse {
+    justify-content: end;
+  }
+  
+  .nav-link {
+    color: #ad1111 !important;
+    font-size: 14pt;
+    font-weight: bold;
+    margin: auto;
+    position: sticky;
+    top:0;
+  }
+  
+  .navbar-link:hover, .navbar-link:active, .navbar-link:focus {
+    background-color: rgb(236, 235, 235) !important;
+    border-color: #000 !important;
+  }
+  
+  .navbar-logout:hover, .navbar-logout:active, .navbar-logout:focus {
+    background-color: rgb(155, 150, 150) !important;
+    border-color: #000 !important;
+  }
+  
+  .navbar-logo {
+    height: 200px;
+    margin-bottom: 10px;
+  }

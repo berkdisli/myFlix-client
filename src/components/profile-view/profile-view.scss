@@ -1,0 +1,51 @@
+.profile-info {
+    margin-top: 10px;
+  }
+  
+  .col-edit-profile {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .edit-button {
+    margin-top: 10px;
+    border: none;
+  }
+  
+  .edit-button:hover, .edit-button:active, .edit-button:focus {
+    background-color: rgb(32, 184, 32) !important;
+    border-color: #000 !important;
+  }
+  
+  .favorite{
+      font-size: 30px;
+      font-family: fantasy;
+  
+  }
+  
+  .movie-card {
+    width: auto;
+  }
+  
+  img {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .unfavorite-button {
+    width: 120;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+  }
+
+  .unfavorite-button:hover, .unfavorite-button:focus, .unfavorite-button:active {
+    background-color: rgb(236, 51, 51) !important;
+    border-color: #000 !important;
+  }
+  .delete-profile-button:hover, .delete-profile-button:focus, .delete-profile-button:active {
+    background-color: rgb(236, 51, 51) !important;
+    border-color: #000 !important;
+  }
