@@ -45,7 +45,7 @@ export class MovieView extends React.Component {
           </Row>
           <Row className="movie-genre">
             <Col className="label">Genre: </Col>
-            <Col className="value" md={10}>
+            <Col className="value" md={12}>
             <Link to={`/genres/${movie.Genre.Name}`}>
               <Button className="props-button" variant="link">{movie.Genre.Name}</Button>
             </Link>
@@ -53,7 +53,7 @@ export class MovieView extends React.Component {
           </Row>
           <Row className="movie-director">
             <Col className="label">Director: </Col>
-            <Col className="value" md={10}>
+            <Col className="value" md={12}>
             <Link to={`/directors/${movie.Director.Name}`}>
               <Button className="props-button" variant="link">{movie.Director.Name}</Button>
             </Link>
