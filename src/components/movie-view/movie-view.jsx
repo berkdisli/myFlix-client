@@ -20,40 +20,50 @@ export class MovieView extends React.Component {
     const { movie, onBackClick } = this.props;
 
     return (
-      <div className="movie-view">
-        <div className="movie-poster">
-          <img src={movie.ImagePath} />
-        </div>
-        <div className="movie-title">
-          <span className="label">Title: </span>
-          <span className="value">{movie.Title}</span>
-        </div>
-        <div className="movie-genre">
-          <span className="label">Genre: </span>
-          <span className="value">{movie.Genre.Name}</span>
-        </div>
-        <div className="movie-director">
-          <span className="label">Director: </span>
-          <span className="value">{movie.Director.Name}</span>
-        </div>
-        <div className="movie-actors">
-          <span className="label">Actors: </span>
-          <span className="value">{movie.Actors}</span>
-        </div>
-        <div className="movie-description">
-          <span className="label">Description: </span>
-          <span className="value">{movie.Description}</span>
-        </div>
-        <Link to={`/movies/directors/${movie.Director.Name}`}>
-          <Button variant="link">Director</Button>
-        </Link>
-
-        <Link to={`/movies/genres/${movie.Genre.Name}`}>
-          <Button variant="link">Genre</Button>
-        </Link>
-        
-        <Button onClick={() => { onBackClick(null); }}>Back</Button>
-       </div>
+      <Container fluid>
+      <Row>
+        <Col className="movie-poster value"><img className="movie-poster-img" src={movie.ImagePath} /></Col>
+      </Row>
+      <Row className="movie-title">
+        <Col style={{fontSize:"40px"}}>{movie.Title}</Col>
+      </Row>
+      <Row className="movie-props">
+        <Col>
+          <Row className="movie-description">
+            <Col>Description: </Col>
+          </Row>
+          <Row className="movie-description-text">
+            <Col className="value" md={12}>{movie.Description}</Col>
+          </Row>
+          <Row className="movie-genre">
+            <Col className="label">Genre: </Col>
+            <Col className="value" md={12}>
+            <Link to={`/genres/${movie.Genre.Name}`}>
+              <Button className="props-button" variant="link">{movie.Genre.Name}</Button>
+            </Link>
+            </Col>
+          </Row>
+          <Row className="movie-director">
+            <Col className="label">Director: </Col>
+            <Col className="value" md={12}>
+            <Link to={`/directors/${movie.Director.Name}`}>
+              <Button className="props-button" variant="link">{movie.Director.Name}</Button>
+            </Link>
+            </Col>
+          </Row>
+          <Row className="actors">
+            <Col className="label">Actors: </Col>
+          </Row>
+          <Row>
+            <Col className="value" md={12}>{movie.Actors}</Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row className="buttons">
+        <Button variant= 'danger' className="add-favorite-button" onClick={() => { this.onAddFavorite(movie._id) }}>Add Favorite</Button>
+        <Button variant= 'danger' className="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
+      </Row>
+  </Container>
     );
   }
 }
