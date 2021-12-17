@@ -43333,7 +43333,7 @@ let mapStateToProps = (state)=>{
 };
 exports.default = _reactRedux.connect(mapStateToProps, {
     setUser: _actions.setUser,
-    updateUser: _actions.updateUser
+    setUpdateUsers: _actions.setUpdateUsers
 })(ProfileView);
 
   $parcel$ReactRefreshHelpers$80e7.postlude(module);

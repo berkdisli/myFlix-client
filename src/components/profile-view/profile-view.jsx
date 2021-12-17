@@ -8,7 +8,7 @@ import { MovieCard } from '../movie-card/movie-card';
 
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 
-import { setUser, updateUser } from '../../actions/actions';
+import { setUser, setUpdateUsers } from '../../actions/actions';
 
 import { connect } from 'react-redux';
 
@@ -224,4 +224,4 @@ let mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {setUser, updateUser})(ProfileView);
+export default connect(mapStateToProps, {setUser, setUpdateUsers})(ProfileView);
