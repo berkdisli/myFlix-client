@@ -61,7 +61,7 @@
   margin-right: 90px;
 }
 
-.movie-title, .movie-release-date, .movie-description, .movie-genre, .movie-director {
+.movie-title, .movie-description, .movie-genre, .movie-director {
   font-size: 18px;
   font-weight: 500;
 }
@@ -103,6 +103,10 @@
     max-height: 400px !important;
     min-height: 400px !important;
   }
+}
+.label {
+  font-weight: bold;
+  font-size: 18px;
 }
 .register-button:hover, .register-button:focus, .register-button:active {
   background-color: #0bbdca !important;

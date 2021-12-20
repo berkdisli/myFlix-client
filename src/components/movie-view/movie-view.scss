@@ -24,7 +24,7 @@
     margin-right: 90px;
   }
   
-  .movie-title, .movie-release-date, .movie-description, .movie-genre, .movie-director {
+  .movie-title, .movie-description, .movie-genre, .movie-director {
     font-size: 18px;
     font-weight: 500;
   }
@@ -68,4 +68,8 @@
     }
   }
 
-  
+  .label {
+    font-weight: bold;
+    font-size: 18px;
+  }
+

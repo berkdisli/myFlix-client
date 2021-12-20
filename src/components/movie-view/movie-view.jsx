@@ -38,7 +38,7 @@ export class MovieView extends React.Component {
       <Row className="movie-props">
         <Col>
           <Row className="movie-description">
-            <Col>Description: </Col>
+            <Col className= "label">Description: </Col>
           </Row>
           <Row className="movie-description-text">
             <Col className="value" md={12}>{movie.Description}</Col>
@@ -60,10 +60,10 @@ export class MovieView extends React.Component {
             </Col>
           </Row>
           <Row className="actors">
-            <Col className="label">Actors: </Col>
+            <Col className="label" >Actors: </Col>
           </Row>
           <Row>
-            <Col className="value" md={12}>{movie.Actors}</Col>
+            <Col className="value" md={12}>{movie.Actors.toString().replaceAll(',', ', ')}</Col>
           </Row>
         </Col>
       </Row>

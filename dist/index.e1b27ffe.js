@@ -31088,6 +31088,7 @@ class MovieView extends _reactDefault.default.Component {
                                 },
                                 __self: this,
                                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    className: "label",
                                     __source: {
                                         fileName: "src/components/movie-view/movie-view.jsx",
                                         lineNumber: 41,
@@ -31254,7 +31255,7 @@ class MovieView extends _reactDefault.default.Component {
                                         columnNumber: 13
                                     },
                                     __self: this,
-                                    children: movie.Actors
+                                    children: movie.Actors.toString().replaceAll(',', ', ')
                                 })
                             })
                         ]
