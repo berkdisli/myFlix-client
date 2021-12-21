@@ -25,12 +25,15 @@ import LogoImage from '../../img/logo.png';
 
  class MainView extends React.Component {
 
-  constructor() {
+  constructor(){
     super();
-    // #3 movies state removed from here
     this.state = {
-      user:null
-    };
+      movies: [],
+      selectedMovie: null,
+      register: null,
+      user: null,
+      favoriteMovies: []
+    }
   }
 
  
@@ -94,7 +97,7 @@ onLoggedOut() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link className="navbar-link" href="/">Home</Nav.Link>
-                <Nav.Link className="navbar-link" href="/users/${user}">Profile</Nav.Link>
+                <Nav.Link className="navbar-link" href={'/users/${user}'}>Profile</Nav.Link>
                 <Nav.Link href="#logout">
                   <Button className="navbar-logout" variant="danger" onClick={() => { this.onLoggedOut() }}>Logout</Button>
                 </Nav.Link>
@@ -167,7 +170,10 @@ onLoggedOut() {
 }}
 
 let mapStateToProps = state => {
-  return { movies: state.movies }  
+  return {
+    user: state.user,
+    movies: state.movies
+  }
 }
 
 export default connect(mapStateToProps, { setMovies } )(MainView);

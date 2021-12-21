@@ -198,13 +198,13 @@ export class ProfileView extends React.Component {
         </Row>
 
         <Row className="fav-mov">
-          <Col xs={2}>
+          <Col xs={6}>
           <h3 className='favorite'>Favorite Movies</h3>
           </Col>
         </Row>
         <Row>
           {FavoriteMovies.map((movie) => (
-            <Col key={movie._id}>
+            <Col xs={4} key={movie._id}>
               <MovieCard movie={movie} />
               <Button className="unfavorite-button" variant="danger" onClick={() => { this.onRemoveFavorite(movie._id) }} >Remove Favorite</Button>
             </Col>
