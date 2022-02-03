@@ -97,7 +97,7 @@ onLoggedOut() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link className="navbar-link" href="/">Home</Nav.Link>
-                <Nav.Link className="navbar-link" href={'/users/${user}'}>Profile</Nav.Link>
+                <Nav.Link className="navbar-link" href={`/users/${user}`}>Profile</Nav.Link>
                 <Nav.Link href="#logout">
                   <Button className="navbar-logout" variant="danger" onClick={() => { this.onLoggedOut() }}>Logout</Button>
                 </Nav.Link>
