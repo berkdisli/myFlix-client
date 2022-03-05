@@ -1,4 +1,4 @@
-# myFlix 
+# myFlix-Client
 
 ## User Goals: 
 
