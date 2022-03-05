@@ -1,6 +1,8 @@
 # myFlix 
 
-## User Goals: To build the server-side component of a “movies” web application. 
+## User Goals: 
+
+To build the server-side component of a “movies” web application. 
 The web application will provide users with access to information about different
 movies, directors, and genres. Users will be able to sign up, update their
 personal information, and create a list of their favorite movies.
@@ -24,6 +26,10 @@ reading data from requests and morgan for logging.
 * The API source code must be deployed to a publicly accessible platform like GitHub.
 * The API must be deployed to Heroku.
 
-## Technologies: MERN (MongoDB, Express, React, and Node.js)
+## Technologies: 
 
-## Hosted on Netlify: https://berkdislimyflix.netlify.app/
+MERN (MongoDB, Express, React, and Node.js)
+
+## Hosted on Netlify: 
+
+https://berkdislimyflix.netlify.app/
