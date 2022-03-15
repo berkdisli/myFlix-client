@@ -97,8 +97,7 @@ onLoggedOut() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link className="navbar-link" href="/">Home</Nav.Link>
-                <Nav.Link className="navbar-link" href={`/users/:username`}>Profile</Nav.Link>
-                <Nav.Link href="#logout">
+                <Nav.Link className="navbar-link" href={`/users/${username}`}>Profile</Nav.Link>                <Nav.Link href="#logout">
                   <Button className="navbar-logout" variant="danger" onClick={() => { this.onLoggedOut() }}>Logout</Button>
                 </Nav.Link>
               </Nav>
@@ -152,17 +151,7 @@ onLoggedOut() {
             </Col>
         }} />
 
-        {/* route for link on main-view to profile-view */}
-        <Route path='/users/:username' render={({ history }) => {
-            if (!user) return <Col>
-              <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
-          </Col>
-            if (movies.length === 0) return <div className="main-view" />;
-            return <Col md={12}>
-            <ProfileView user={user} setUser={user => this.setUser(user)}
-            movies={movies} onLoggedOut={() => this.onLoggedOut()} onBackClick={() => history.goBack()}/>
-          </Col>
-        }} />
+        
       </Row>
       </Container>
     </Router>

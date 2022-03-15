@@ -25940,7 +25940,7 @@ class MainView extends _reactDefault.default.Component {
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
                                             className: "navbar-link",
-                                            href: `/users/:username`,
+                                            href: `/users/${username}`,
                                             __source: {
                                                 fileName: "src/components/main-view/main-view.jsx",
                                                 lineNumber: 100,
@@ -25949,12 +25949,13 @@ class MainView extends _reactDefault.default.Component {
                                             __self: this,
                                             children: "Profile"
                                         }),
+                                        " ",
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
                                             href: "#logout",
                                             __source: {
                                                 fileName: "src/components/main-view/main-view.jsx",
-                                                lineNumber: 101,
-                                                columnNumber: 17
+                                                lineNumber: 100,
+                                                columnNumber: 113
                                             },
                                             __self: this,
                                             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
@@ -25965,7 +25966,7 @@ class MainView extends _reactDefault.default.Component {
                                                 },
                                                 __source: {
                                                     fileName: "src/components/main-view/main-view.jsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 101,
                                                     columnNumber: 19
                                                 },
                                                 __self: this,
@@ -25981,7 +25982,7 @@ class MainView extends _reactDefault.default.Component {
                         className: "main-view justify-content-md-center",
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 107,
+                            lineNumber: 106,
                             columnNumber: 7
                         },
                         __self: this,
@@ -26004,7 +26005,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 108,
+                                    lineNumber: 107,
                                     columnNumber: 9
                                 },
                                 __self: this
@@ -26022,7 +26023,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 116,
+                                    lineNumber: 115,
                                     columnNumber: 8
                                 },
                                 __self: this
@@ -26049,7 +26050,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 124,
+                                    lineNumber: 123,
                                     columnNumber: 9
                                 },
                                 __self: this
@@ -26076,7 +26077,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 134,
+                                    lineNumber: 133,
                                     columnNumber: 9
                                 },
                                 __self: this
@@ -26103,38 +26104,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 145,
-                                    columnNumber: 9
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: "/users/:username",
-                                render: ({ history  })=>{
-                                    if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
-                                            onLoggedIn: (user)=>this.onLoggedIn(user)
-                                        })
-                                    }));
-                                    if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "main-view"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        md: 12,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_profileView.ProfileView, {
-                                            user: user1,
-                                            setUser: (user)=>this.setUser(user)
-                                            ,
-                                            movies: movies,
-                                            onLoggedOut: ()=>this.onLoggedOut()
-                                            ,
-                                            onBackClick: ()=>history.goBack()
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 156,
+                                    lineNumber: 144,
                                     columnNumber: 9
                                 },
                                 __self: this
