@@ -1,0 +1,230 @@
+.login-button:hover, .login-button:focus, .login-button:active {
+  background-color: #0bbdca !important;
+  border-color: #000 !important;
+}
+.navbar-header {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+.nav-link {
+  color: #ad1111 !important;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: auto;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-link:hover, .navbar-link:active, .navbar-link:focus {
+  background-color: #ecebeb !important;
+  border-color: #000 !important;
+}
+
+.navbar-logout:hover, .navbar-logout:active, .navbar-logout:focus {
+  background-color: #9b9696 !important;
+  border-color: #000 !important;
+}
+
+.navbar-logo {
+  height: 200px;
+  margin-bottom: 10px;
+}
+.movie-poster {
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.movie-view-button-div {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.movie-poster-img {
+  height: 600px;
+  margin: auto;
+}
+
+.movie-title {
+  text-align: center;
+}
+
+.movie-props {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+.movie-title, .movie-description, .movie-genre, .movie-director {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.props-button {
+  padding: 0;
+}
+
+.buttons {
+  justify-content: center;
+}
+
+.add-favorite-button {
+  margin-right: 20px;
+  margin-bottom: 5px;
+  background-color: #033159;
+  border-color: #000;
+}
+
+.add-favorite-button:hover, .add-favorite-button:focus, .add-favorite-button:active {
+  background-color: #ec3333 !important;
+  border-color: #000 !important;
+}
+
+.movie-view-button {
+  margin-bottom: 5px;
+  background-color: #ff0000;
+  border-color: #000;
+}
+
+.movie-view-button:hover, .movie-view-button:focus, .movie-view-button:active {
+  background-color: #9b9696 !important;
+  border-color: #000 !important;
+}
+
+@media all and (max-width: 509px) {
+  .movie-poster-img {
+    height: 400px !important;
+    max-height: 400px !important;
+    min-height: 400px !important;
+  }
+}
+.label {
+  font-weight: bold;
+  font-size: 18px;
+}
+.register-button:hover, .register-button:focus, .register-button:active {
+  background-color: #0bbdca !important;
+  border-color: #000 !important;
+}
+.genre-back-button:hover, .genre-back-button:focus, .genre-back-button:active {
+  background-color: #9b9696 !important;
+  border-color: #000 !important;
+}
+.director-back-button:hover, .director-back-button:focus, .director-back-button:active {
+  background-color: #9b9696 !important;
+  border-color: #000 !important;
+}
+.profile-info {
+  margin-top: 10px;
+}
+
+.col-edit-profile {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.edit-button {
+  margin-top: 10px;
+  border: none;
+}
+
+.edit-button:hover, .edit-button:active, .edit-button:focus {
+  background-color: #20b820 !important;
+  border-color: #000 !important;
+}
+
+.favorite {
+  font-size: 30px;
+  font-family: fantasy;
+}
+
+.movie-card {
+  width: auto;
+}
+
+img {
+  max-width: 400px;
+  margin: auto;
+}
+
+.unfavorite-button {
+  width: 120;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+}
+
+.unfavorite-button:hover, .unfavorite-button:focus, .unfavorite-button:active {
+  background-color: #ec3333 !important;
+  border-color: #000 !important;
+}
+
+.delete-profile-button:hover, .delete-profile-button:focus, .delete-profile-button:active {
+  background-color: #ec3333 !important;
+  border-color: #000 !important;
+}
+.movie-card-container {
+  display: inline-block;
+}
+
+.movie-card-image {
+  min-height: 500px;
+  object-fit: cover;
+}
+
+.col {
+  padding: 0px !important;
+}
+
+.movie-card-button {
+  position: absolute;
+  bottom: 0px;
+  display: inline-block;
+  right: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin-bottom: 15px;
+}
+
+@media all and (max-width: 1200px) {
+  .movie-card-image {
+    height: 350px !important;
+    min-height: 350px;
+    max-height: 350px;
+    object-fit: cover !important;
+  }
+}
+@media all and (max-width: 767px) {
+  .movie-card-image {
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px !important;
+    object-fit: contain !important;
+  }
+}
+.card-body {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.filter-bar {
+  margin: auto;
+  left: -28px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.my-flix {
+  color: steelblue;
+}
+/*# sourceMappingURL=index.c1843862.css.map */

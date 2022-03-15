@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {Form, Button, Card, CardGroup, Container, Row, Col} from 'react-bootstrap';
+import {Form, Button, Card, CardGroup, Container, Row, Col, Navbar, Nav} from 'react-bootstrap';
 
 import './registration-view.scss';
+import '../navbar/navbar.scss'
+
 import axios from 'axios';
 
 export function RegisView(props) {
@@ -75,7 +77,7 @@ export function RegisView(props) {
                     placeholder="Enter your email address" />
                 </Form.Group>
 
-                    <Button variant="outline-light" type="submit" onClick={handleSubmit}>
+                    <Button className='register-button' variant="info" type="submit" onClick={handleSubmit}>
                     Register
                     </Button>
                     </Form> 

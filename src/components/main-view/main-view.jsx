@@ -1,28 +1,39 @@
 import React from 'react';
 import axios from 'axios';
+
+import { connect } from 'react-redux';
+
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import { LoginView } from '../login-view/login-view';
-import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { RegisView } from '../registration-view/registration-view';
-// import {ProfileView} from '../profile-view/profile-view';
-// import { DirectorView } from '../director-view/director-view';
-// import { GenreView } from '../genre-view/genre-view';
+import { GenreView } from '../genre-view/genre-view';
+import { DirectorView } from '../director-view/director-view';
+import { ProfileView } from '../profile-view/profile-view';
+
+import { setMovies } from '../../actions/actions';
+
+import MoviesList from '../movies-list/movies-list';
+
+import {Row, Col, Container, Navbar, Nav, Button} from 'react-bootstrap';
 
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import '../navbar/navbar.scss';
+import LogoImage from '../../img/logo.png';
 
-export default class MainView extends React.Component {
 
-  constructor() {
+ class MainView extends React.Component {
+
+  constructor(){
     super();
-// Initial state is set to null
     this.state = {
       movies: [],
-      user:null
-    };
+      selectedMovie: null,
+      register: null,
+      user: null,
+      favoriteMovies: []
+    }
   }
 
  
@@ -35,52 +46,72 @@ export default class MainView extends React.Component {
         this.getMovies(accessToken);
       }
   }
+  /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
+  onLoggedIn(authData) {
+    console.log(authData);
+    this.setState({
+      user: authData.user.Username
+    });
+  
+    localStorage.setItem('token', authData.token);
+    localStorage.setItem('user', authData.user.Username);
+    this.getMovies(authData.token);
+  }
 
 getMovies(token) {
   axios.get('https://berkdislimyflix.herokuapp.com/movies', {
     headers: { Authorization: `Bearer ${token}`}
   })
   .then(response => {
-    // Assign the result to the state
-    this.setState({
-      movies: response.data
-    });
+    this.props.setMovies(response.data);
+    console.log(response.data)
   })
   .catch(function (error) {
     console.log(error);
   });
 }
 
-  /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
-onLoggedIn(authData) {
-  console.log(authData);
+onLoggedOut() {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
   this.setState({
-    user: authData.user.Username
+    user: null
   });
-
-  localStorage.setItem('token', authData.token);
-  localStorage.setItem('user', authData.user.Username);
-  this.getMovies(authData.token);
+  window.open('/', '_self');
 }
 
+
   render() {
-    const { movies, user } = this.state;
+    let { movies } = this.props;
+    let { user } = this.state;
 
   return (
     <Router>
+      <Container fluid>
+          <Navbar className="navbar-header" expand="lg">
+            <Navbar.Brand className="navbar-logo" href="/">
+              <img src={LogoImage}
+              className="navbar-logo d-inline-block align-top"/>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link className="navbar-link" href="/">Home</Nav.Link>
+                <Nav.Link className="navbar-link" href={`/users/:username`}>Profile</Nav.Link>
+                <Nav.Link href="#logout">
+                  <Button className="navbar-logout" variant="danger" onClick={() => { this.onLoggedOut() }}>Logout</Button>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar> 
       <Row className="main-view justify-content-md-center">
         <Route exact path="/" render={() => {
            if (!user) return <Col>
            <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
          </Col>
-         // Before the movies have been loaded
            if (movies.length === 0) return <div className="main-view" />;
 
-         return movies.map(m => (
-           <Col md={3} key={m._id}>
-             <MovieCard movie={m} />
-           </Col>
-         ))
+           return <MoviesList movies={movies}/>;    
        }} />
        <Route path="/register" render={() => {
         if (user) return <Redirect to="/" />
@@ -133,7 +164,16 @@ onLoggedIn(authData) {
           </Col>
         }} />
       </Row>
+      </Container>
     </Router>
   );
 }}
 
+let mapStateToProps = state => {
+  return {
+    user: state.user,
+    movies: state.movies
+  }
+}
+
+export default connect(mapStateToProps, { setMovies } )(MainView);

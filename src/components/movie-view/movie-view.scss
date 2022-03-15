@@ -1,0 +1,75 @@
+.movie-poster {
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .movie-view-button-div {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .movie-poster-img {
+    height: 600px;
+    margin: auto;
+  }
+  
+  .movie-title  {
+    text-align: center;
+  }
+  
+  .movie-props {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  
+  .movie-title, .movie-description, .movie-genre, .movie-director {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .props-button {
+    padding: 0;
+  }
+  
+  .buttons {
+    justify-content: center;
+  }
+  
+  .add-favorite-button {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    background-color: #033159;
+    border-color: #000;
+  }
+  
+  .add-favorite-button:hover, .add-favorite-button:focus, .add-favorite-button:active {
+    background-color: rgb(236, 51, 51) !important;
+    border-color: #000 !important;
+  }
+  
+  .movie-view-button {
+    margin-bottom: 5px;
+    background-color: #ff0000;
+    border-color: #000;
+  }
+  
+  .movie-view-button:hover, .movie-view-button:focus, .movie-view-button:active {
+    background-color: rgb(155, 150, 150) !important;
+    border-color: #000 !important;
+  }
+  
+  @media all and (max-width: 509px) {
+    .movie-poster-img {
+      height: 400px !important;
+      max-height: 400px !important;
+      min-height: 400px !important;
+    }
+  }
+
+  .label {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
