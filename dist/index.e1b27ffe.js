@@ -969,7 +969,7 @@ class MyFlixApplication extends _reactDefault.default.Component {
             __source: {
                 fileName: "src/index.jsx",
                 lineNumber: 20,
-                columnNumber: 6
+                columnNumber: 7
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_containerDefault.default, {
@@ -992,9 +992,16 @@ class MyFlixApplication extends _reactDefault.default.Component {
     }
 }
 // Finds the root of your app
-const container = document.getElementsByClassName('app-container')[0];
+const container = document.getElementById("app");
 // Tells React to render your app in the root DOM element
-_reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElement(MyFlixApplication), container);
+_reactDomDefault.default.render(/*#__PURE__*/ _jsxRuntime.jsx(MyFlixApplication, {
+    __source: {
+        fileName: "src/index.jsx",
+        lineNumber: 33,
+        columnNumber: 17
+    },
+    __self: undefined
+}), container);
 
   $parcel$ReactRefreshHelpers$607b.postlude(module);
 } finally {
