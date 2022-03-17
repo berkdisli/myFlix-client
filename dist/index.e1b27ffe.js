@@ -42327,7 +42327,9 @@ function RegisView(props) {
         }).then((response)=>{
             const data = response.data;
             console.log(data);
-            window.open("/", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
+            window.open("/", "_self");
+            alert("Registration is successful");
+        // the second argument '_self' is necessary so that the page will open in the current tab
         }).catch((e)=>{
             console.log("error registering the user");
             alert("Something went wrong. Please check your data and try again.");
@@ -42337,42 +42339,42 @@ function RegisView(props) {
         className: "regis-container",
         __source: {
             fileName: "src/components/registration-view/registration-view.jsx",
-            lineNumber: 47,
+            lineNumber: 50,
             columnNumber: 5
         },
         __self: this,
         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
             __source: {
                 fileName: "src/components/registration-view/registration-view.jsx",
-                lineNumber: 48,
+                lineNumber: 51,
                 columnNumber: 7
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 49,
+                    lineNumber: 52,
                     columnNumber: 9
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
                     __source: {
                         fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 50,
+                        lineNumber: 53,
                         columnNumber: 11
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card, {
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 51,
+                            lineNumber: 54,
                             columnNumber: 13
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                             __source: {
                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 52,
+                                lineNumber: 55,
                                 columnNumber: 15
                             },
                             __self: this,
@@ -42380,7 +42382,7 @@ function RegisView(props) {
                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                     __source: {
                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                        lineNumber: 53,
+                                        lineNumber: 56,
                                         columnNumber: 17
                                     },
                                     __self: this,
@@ -42389,7 +42391,7 @@ function RegisView(props) {
                                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form, {
                                     __source: {
                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                        lineNumber: 54,
+                                        lineNumber: 57,
                                         columnNumber: 17
                                     },
                                     __self: this,
@@ -42397,7 +42399,7 @@ function RegisView(props) {
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 55,
+                                                lineNumber: 58,
                                                 columnNumber: 19
                                             },
                                             __self: this,
@@ -42405,7 +42407,7 @@ function RegisView(props) {
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 56,
+                                                        lineNumber: 59,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42420,7 +42422,7 @@ function RegisView(props) {
                                                     placeholder: "Enter a username",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 57,
+                                                        lineNumber: 60,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42430,7 +42432,7 @@ function RegisView(props) {
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 66,
+                                                lineNumber: 69,
                                                 columnNumber: 19
                                             },
                                             __self: this,
@@ -42438,7 +42440,7 @@ function RegisView(props) {
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 67,
+                                                        lineNumber: 70,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42454,7 +42456,7 @@ function RegisView(props) {
                                                     placeholder: "Your password must be at least 8 characters",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 68,
+                                                        lineNumber: 71,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42465,7 +42467,7 @@ function RegisView(props) {
                                             controlId: "formBirthday",
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 78,
+                                                lineNumber: 81,
                                                 columnNumber: 19
                                             },
                                             __self: this,
@@ -42474,7 +42476,7 @@ function RegisView(props) {
                                                     className: "mt-3",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 79,
+                                                        lineNumber: 82,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42487,7 +42489,7 @@ function RegisView(props) {
                                                     ,
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 80,
+                                                        lineNumber: 83,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42497,7 +42499,7 @@ function RegisView(props) {
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 87,
+                                                lineNumber: 90,
                                                 columnNumber: 19
                                             },
                                             __self: this,
@@ -42505,7 +42507,7 @@ function RegisView(props) {
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 88,
+                                                        lineNumber: 91,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42520,7 +42522,7 @@ function RegisView(props) {
                                                     placeholder: "Enter your email address",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 89,
+                                                        lineNumber: 92,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42534,7 +42536,7 @@ function RegisView(props) {
                                             onClick: handleSubmit,
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 98,
+                                                lineNumber: 101,
                                                 columnNumber: 19
                                             },
                                             __self: this,
