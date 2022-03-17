@@ -25830,6 +25830,11 @@ class MainView extends _reactDefault.default.Component {
             this.getMovies(accessToken);
         }
     }
+    onRegistration(registration) {
+        this.setState({
+            registration
+        });
+    }
     /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/ onLoggedIn(authData) {
         console.log(authData);
         this.setState({
@@ -25865,7 +25870,7 @@ class MainView extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 84,
+                lineNumber: 91,
                 columnNumber: 7
             },
             __self: this,
@@ -25873,7 +25878,7 @@ class MainView extends _reactDefault.default.Component {
                 fluid: true,
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 85,
+                    lineNumber: 92,
                     columnNumber: 9
                 },
                 __self: this,
@@ -25883,7 +25888,7 @@ class MainView extends _reactDefault.default.Component {
                         expand: "lg",
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 86,
+                            lineNumber: 93,
                             columnNumber: 11
                         },
                         __self: this,
@@ -25893,7 +25898,7 @@ class MainView extends _reactDefault.default.Component {
                                 href: "/",
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 87,
+                                    lineNumber: 94,
                                     columnNumber: 13
                                 },
                                 __self: this,
@@ -25902,7 +25907,7 @@ class MainView extends _reactDefault.default.Component {
                                     className: "navbar-logo d-inline-block align-top",
                                     __source: {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 88,
+                                        lineNumber: 95,
                                         columnNumber: 15
                                     },
                                     __self: this
@@ -25912,7 +25917,7 @@ class MainView extends _reactDefault.default.Component {
                                 "aria-controls": "basic-navbar-nav",
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 93,
+                                    lineNumber: 100,
                                     columnNumber: 13
                                 },
                                 __self: this
@@ -25921,7 +25926,7 @@ class MainView extends _reactDefault.default.Component {
                                 id: "basic-navbar-nav",
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 94,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 },
                                 __self: this,
@@ -25929,7 +25934,7 @@ class MainView extends _reactDefault.default.Component {
                                     className: "me-auto",
                                     __source: {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 95,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     },
                                     __self: this,
@@ -25939,7 +25944,7 @@ class MainView extends _reactDefault.default.Component {
                                             href: "/",
                                             __source: {
                                                 fileName: "src/components/main-view/main-view.jsx",
-                                                lineNumber: 96,
+                                                lineNumber: 103,
                                                 columnNumber: 17
                                             },
                                             __self: this,
@@ -25950,7 +25955,7 @@ class MainView extends _reactDefault.default.Component {
                                             href: `/users/${user1}`,
                                             __source: {
                                                 fileName: "src/components/main-view/main-view.jsx",
-                                                lineNumber: 100,
+                                                lineNumber: 107,
                                                 columnNumber: 19
                                             },
                                             __self: this,
@@ -25960,7 +25965,7 @@ class MainView extends _reactDefault.default.Component {
                                             href: "#logout",
                                             __source: {
                                                 fileName: "src/components/main-view/main-view.jsx",
-                                                lineNumber: 104,
+                                                lineNumber: 111,
                                                 columnNumber: 17
                                             },
                                             __self: this,
@@ -25972,7 +25977,7 @@ class MainView extends _reactDefault.default.Component {
                                                 },
                                                 __source: {
                                                     fileName: "src/components/main-view/main-view.jsx",
-                                                    lineNumber: 105,
+                                                    lineNumber: 112,
                                                     columnNumber: 19
                                                 },
                                                 __self: this,
@@ -25988,7 +25993,7 @@ class MainView extends _reactDefault.default.Component {
                         className: "main-view justify-content-md-center",
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 118,
+                            lineNumber: 125,
                             columnNumber: 11
                         },
                         __self: this,
@@ -25997,10 +26002,14 @@ class MainView extends _reactDefault.default.Component {
                                 exact: true,
                                 path: "/",
                                 render: ()=>{
-                                    if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
-                                            onLoggedIn: (user)=>this.onLoggedIn(user)
-                                        })
+                                    if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                                        children: [
+                                            /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                                            }),
+                                            /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegisView, {
+                                            })
+                                        ]
                                     }));
                                     if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
                                         className: "main-view"
@@ -26011,25 +26020,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 119,
-                                    columnNumber: 13
-                                },
-                                __self: this
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                                path: "/register",
-                                render: ()=>{
-                                    if (user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                        to: "/"
-                                    }));
-                                    return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegisView, {
-                                        })
-                                    }));
-                                },
-                                __source: {
-                                    fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 134,
+                                    lineNumber: 126,
                                     columnNumber: 13
                                 },
                                 __self: this
@@ -26056,7 +26047,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 147,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 },
                                 __self: this
@@ -26083,7 +26074,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 168,
+                                    lineNumber: 166,
                                     columnNumber: 13
                                 },
                                 __self: this
@@ -26110,7 +26101,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 193,
+                                    lineNumber: 191,
                                     columnNumber: 13
                                 },
                                 __self: this
@@ -26133,7 +26124,7 @@ class MainView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 217,
+                                    lineNumber: 215,
                                     columnNumber: 13
                                 },
                                 __self: this
@@ -42261,13 +42252,13 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _s = $RefreshSig$();
 function RegisView(props) {
     _s();
-    const [username, setUsername] = _react.useState('');
-    const [password, setPassword] = _react.useState('');
-    const [email, setEmail] = _react.useState('');
-    const [birthday, setBirthday] = _react.useState('');
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
+    const [email, setEmail] = _react.useState("");
+    const [birthday, setBirthday] = _react.useState("");
     const handleSubmit = (e)=>{
         e.preventDefault();
-        _axiosDefault.default.post('https://berkdislimyflix.herokuapp.com/users', {
+        _axiosDefault.default.post("https://berkdislimyflix.herokuapp.com/users", {
             Username: username,
             Password: password,
             Email: email,
@@ -42275,60 +42266,60 @@ function RegisView(props) {
         }).then((response)=>{
             const data = response.data;
             console.log(data);
-            window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+            window.open("/", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
         }).catch((e)=>{
-            console.log('error registering the user');
-            alert('Something went wrong. Please check your data and try again.');
+            console.log("error registering the user");
+            alert("Something went wrong. Please check your data and try again.");
         });
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
         __source: {
             fileName: "src/components/registration-view/registration-view.jsx",
-            lineNumber: 36,
-            columnNumber: 3
+            lineNumber: 47,
+            columnNumber: 5
         },
         __self: this,
         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
             __source: {
                 fileName: "src/components/registration-view/registration-view.jsx",
-                lineNumber: 37,
-                columnNumber: 6
+                lineNumber: 48,
+                columnNumber: 7
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 38,
+                    lineNumber: 49,
                     columnNumber: 9
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
                     __source: {
                         fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 39,
-                        columnNumber: 13
+                        lineNumber: 50,
+                        columnNumber: 11
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card, {
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 40,
-                            columnNumber: 17
+                            lineNumber: 51,
+                            columnNumber: 13
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                             __source: {
                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 41,
-                                columnNumber: 21
+                                lineNumber: 52,
+                                columnNumber: 15
                             },
                             __self: this,
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                     __source: {
                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                        lineNumber: 42,
-                                        columnNumber: 21
+                                        lineNumber: 53,
+                                        columnNumber: 17
                                     },
                                     __self: this,
                                     children: "Registration Page "
@@ -42336,23 +42327,23 @@ function RegisView(props) {
                                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form, {
                                     __source: {
                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                        lineNumber: 43,
-                                        columnNumber: 21
+                                        lineNumber: 54,
+                                        columnNumber: 17
                                     },
                                     __self: this,
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 44,
-                                                columnNumber: 21
+                                                lineNumber: 55,
+                                                columnNumber: 19
                                             },
                                             __self: this,
                                             children: [
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 45,
+                                                        lineNumber: 56,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42367,7 +42358,7 @@ function RegisView(props) {
                                                     placeholder: "Enter a username",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 46,
+                                                        lineNumber: 57,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42377,15 +42368,15 @@ function RegisView(props) {
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 54,
-                                                columnNumber: 17
+                                                lineNumber: 66,
+                                                columnNumber: 19
                                             },
                                             __self: this,
                                             children: [
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 55,
+                                                        lineNumber: 67,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42394,14 +42385,14 @@ function RegisView(props) {
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
                                                     type: "password",
                                                     value: password,
-                                                    onChange: (e)=>setpassword(e.target.value)
+                                                    onChange: (e)=>setPassword(e.target.value)
                                                     ,
                                                     required: true,
                                                     minLength: "8",
                                                     placeholder: "Your password must be at least 8 characters",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 56,
+                                                        lineNumber: 68,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42412,8 +42403,8 @@ function RegisView(props) {
                                             controlId: "formBirthday",
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 65,
-                                                columnNumber: 17
+                                                lineNumber: 78,
+                                                columnNumber: 19
                                             },
                                             __self: this,
                                             children: [
@@ -42421,7 +42412,7 @@ function RegisView(props) {
                                                     className: "mt-3",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 66,
+                                                        lineNumber: 79,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42434,7 +42425,7 @@ function RegisView(props) {
                                                     ,
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 67,
+                                                        lineNumber: 80,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42444,15 +42435,15 @@ function RegisView(props) {
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 70,
-                                                columnNumber: 17
+                                                lineNumber: 87,
+                                                columnNumber: 19
                                             },
                                             __self: this,
                                             children: [
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 71,
+                                                        lineNumber: 88,
                                                         columnNumber: 21
                                                     },
                                                     __self: this,
@@ -42467,7 +42458,7 @@ function RegisView(props) {
                                                     placeholder: "Enter your email address",
                                                     __source: {
                                                         fileName: "src/components/registration-view/registration-view.jsx",
-                                                        lineNumber: 72,
+                                                        lineNumber: 89,
                                                         columnNumber: 21
                                                     },
                                                     __self: this
@@ -42481,8 +42472,8 @@ function RegisView(props) {
                                             onClick: handleSubmit,
                                             __source: {
                                                 fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 80,
-                                                columnNumber: 21
+                                                lineNumber: 98,
+                                                columnNumber: 19
                                             },
                                             __self: this,
                                             children: "Register"
@@ -42497,8 +42488,17 @@ function RegisView(props) {
         })
     }));
 }
-_s(RegisView, "oodxkowr8L/+sgf0pg4pF6PrtNw=");
+_s(RegisView, "jsOQN3GC2XlBG9ITlzCdpyJOnso=");
 _c = RegisView;
+RegisView.propTypes = {
+    registeration: _propTypesDefault.default.shape({
+        Username: _propTypesDefault.default.string.isRequired,
+        Password: _propTypesDefault.default.string.isRequired,
+        Email: _propTypesDefault.default.string.isRequired,
+        Birthday: _propTypesDefault.default.string
+    }),
+    onRegistration: _propTypesDefault.default.func
+};
 var _c;
 $RefreshReg$(_c, "RegisView");
 
@@ -42507,7 +42507,7 @@ $RefreshReg$(_c, "RegisView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","react-bootstrap":"9qMdX","./registration-view.scss":"74YgT","../navbar/navbar.scss":"fvKPS","axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"74YgT":[function() {},{}],"fvKPS":[function() {},{}],"eGJ1e":[function(require,module,exports) {
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","react-bootstrap":"9qMdX","./registration-view.scss":"74YgT","axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","../navbar/navbar.scss":"fvKPS"}],"74YgT":[function() {},{}],"fvKPS":[function() {},{}],"eGJ1e":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ec38 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

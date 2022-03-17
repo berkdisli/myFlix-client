@@ -42,6 +42,13 @@ class MainView extends React.Component {
       this.getMovies(accessToken);
     }
   }
+
+  onRegistration(registration) {
+    this.setState({
+      registration,
+    });
+  }
+
   /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
   onLoggedIn(authData) {
     console.log(authData);
@@ -124,6 +131,7 @@ class MainView extends React.Component {
                   return (
                     <Col>
                       <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                      <RegisView />
                     </Col>
                   );
                 if (movies.length === 0) return <div className="main-view" />;
@@ -131,17 +139,7 @@ class MainView extends React.Component {
                 return <MoviesList movies={movies} />;
               }}
             />
-            <Route
-              path="/register"
-              render={() => {
-                if (user) return <Redirect to="/" />;
-                return (
-                  <Col>
-                    <RegisView />
-                  </Col>
-                );
-              }}
-            />
+
             {/* you keep the rest routes here  */}
 
             <Route
