@@ -120,6 +120,10 @@
 .regis-container {
   padding-bottom: 10px;
 }
+
+.register-button {
+  margin-bottom: 5px;
+}
 .genre-back-button:hover, .genre-back-button:focus, .genre-back-button:active {
   background-color: #9b9696 !important;
   border-color: #000 !important;
