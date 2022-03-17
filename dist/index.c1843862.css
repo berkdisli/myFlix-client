@@ -5,6 +5,7 @@
 
 .login-button {
   padding-bottom: 2px;
+  padding-top: 2px;
 }
 
 .login-container {
@@ -127,6 +128,7 @@
 
 .regis-container {
   padding-bottom: 5px;
+  padding-top: 2px;
 }
 .genre-back-button:hover, .genre-back-button:focus, .genre-back-button:active {
   background-color: #9b9696 !important;
