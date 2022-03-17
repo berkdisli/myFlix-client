@@ -29967,11 +29967,11 @@ var _navbarScss = require("../navbar/navbar.scss");
 var _s = $RefreshSig$();
 function LoginView(props) {
     _s();
-    const [username, setUsername] = _react.useState('');
-    const [password, setPassword] = _react.useState('');
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
     const handleSubmit = (e)=>{
         e.preventDefault();
-        /* Send a request to the server for authentication */ _axiosDefault.default.post('https://berkdislimyflix.herokuapp.com/login', {
+        /* Send a request to the server for authentication */ _axiosDefault.default.post("https://berkdislimyflix.herokuapp.com/login", {
             Username: username,
             Password: password
         }).then((response)=>{
@@ -29979,14 +29979,14 @@ function LoginView(props) {
             props.onLoggedIn(data);
             console.log(username + " logged in!");
         }).catch((e)=>{
-            console.log('There is no such user');
-            alert('Your Username and/or Password are wrong.');
+            console.log("There is no such user");
+            alert("Your Username and/or Password are wrong.");
         });
     };
     return(/*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default, {
         __source: {
             fileName: "src/components/login-view/login-view.jsx",
-            lineNumber: 35,
+            lineNumber: 33,
             columnNumber: 5
         },
         __self: this,
@@ -29995,7 +29995,7 @@ function LoginView(props) {
                 controlId: "formUsername",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 36,
+                    lineNumber: 34,
                     columnNumber: 7
                 },
                 __self: this,
@@ -30003,7 +30003,7 @@ function LoginView(props) {
                     /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 37,
+                            lineNumber: 35,
                             columnNumber: 9
                         },
                         __self: this,
@@ -30017,7 +30017,7 @@ function LoginView(props) {
                         ,
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 38,
+                            lineNumber: 36,
                             columnNumber: 9
                         },
                         __self: this
@@ -30028,7 +30028,7 @@ function LoginView(props) {
                 controlId: "formPassword",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 41,
+                    lineNumber: 44,
                     columnNumber: 7
                 },
                 __self: this,
@@ -30036,7 +30036,7 @@ function LoginView(props) {
                     /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 42,
+                            lineNumber: 45,
                             columnNumber: 9
                         },
                         __self: this,
@@ -30050,7 +30050,7 @@ function LoginView(props) {
                         ,
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 43,
+                            lineNumber: 46,
                             columnNumber: 9
                         },
                         __self: this
@@ -30064,7 +30064,7 @@ function LoginView(props) {
                 onClick: handleSubmit,
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 45,
+                    lineNumber: 53,
                     columnNumber: 7
                 },
                 __self: this,
@@ -30073,7 +30073,7 @@ function LoginView(props) {
         ]
     }));
 }
-_s(LoginView, "9FY2cPL9VBDmuhjwpF2ik6flsHs=");
+_s(LoginView, "Lrw7JeD9zj6OUWhT/IH4OIvPKEk=");
 _c = LoginView;
 var _c;
 $RefreshReg$(_c, "LoginView");
