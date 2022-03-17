@@ -1,6 +1,9 @@
 .login-button:hover, .login-button:focus, .login-button:active {
   background-color: #0bbdca !important;
   border-color: #000 !important;
+}
+
+.login-button {
   padding-bottom: 10px;
 }
 .navbar-header {

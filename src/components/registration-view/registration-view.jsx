@@ -50,6 +50,7 @@ export function RegisView(props) {
           <CardGroup>
             <Card>
               <Card.Body>
+                <Card.Title> Registration </Card.Title>
                 <Form>
                   <Form.Group>
                     <Form.Label>Username</Form.Label>
