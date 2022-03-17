@@ -50,7 +50,6 @@ export function RegisView(props) {
           <CardGroup>
             <Card>
               <Card.Body>
-                <Card.Title>Registration Page </Card.Title>
                 <Form>
                   <Form.Group>
                     <Form.Label>Username</Form.Label>
@@ -76,7 +75,7 @@ export function RegisView(props) {
                   </Form.Group>
 
                   <Form.Group controlId="formBirthday">
-                    <Form.Label className="mt-3">Birthday:</Form.Label>
+                    <Form.Label className="mt-3">Birthday</Form.Label>
                     <Form.Control
                       className="mb-3"
                       type="date"
