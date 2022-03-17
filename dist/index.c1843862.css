@@ -4,12 +4,7 @@
 }
 
 .login-button {
-  padding-bottom: 2px;
   padding-top: 2px;
-}
-
-.login-container {
-  padding-bottom: 2px;
 }
 .navbar-header {
   width: 100%;
@@ -122,13 +117,8 @@
   border-color: #000 !important;
 }
 
-.register-button {
-  padding-bottom: 5px;
-}
-
 .regis-container {
-  padding-bottom: 5px;
-  padding-top: 2px;
+  padding-bottom: 10px;
 }
 .genre-back-button:hover, .genre-back-button:focus, .genre-back-button:active {
   background-color: #9b9696 !important;
