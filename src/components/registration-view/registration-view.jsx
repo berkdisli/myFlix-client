@@ -44,7 +44,7 @@ export function RegisView(props) {
   };
 
   return (
-    <Container>
+    <Container className="regis-container">
       <Row>
         <Col>
           <CardGroup>

@@ -29985,6 +29985,7 @@ function LoginView(props) {
         });
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
+        className: "login-container",
         __source: {
             fileName: "src/components/login-view/login-view.jsx",
             lineNumber: 42,
@@ -42333,6 +42334,7 @@ function RegisView(props) {
         });
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
+        className: "regis-container",
         __source: {
             fileName: "src/components/registration-view/registration-view.jsx",
             lineNumber: 47,

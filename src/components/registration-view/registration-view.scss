@@ -1,5 +1,12 @@
 .register-button:hover, .register-button:focus, .register-button:active {
     background-color: rgb(11, 189, 202) !important;
     border-color: #000 !important;
-    padding-top: 5px;
+  }
+
+  .register-button{
+    padding-bottom: 5px;
+  }
+
+  .regis-container{
+    padding-bottom: 5px;
   }
